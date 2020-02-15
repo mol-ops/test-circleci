@@ -30,8 +30,8 @@ workflows:
     jobs:
       - unit_tests
       - integration_tests:
-        filters:
-          branches:
-            # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
-            ignore: /pull\/[0-9]+/
+          filters:
+            branches:
+              # Forked pull requests have CIRCLE_BRANCH set to pull/XXX
+              ignore: /pull\/[0-9]+/
 
