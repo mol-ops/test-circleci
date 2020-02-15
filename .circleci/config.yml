@@ -6,12 +6,19 @@ jobs:
   unit_tests:
     docker:
       - image: circleci/golang:1.13
+
+    working_directory: /go/src/github.com/hengfengli/test-circleci
+
     steps:
       - checkout
       - run: go test -v ./...
+
   integration_tests:
     docker:
       - image: circleci/golang:1.13
+
+    working_directory: /go/src/github.com/hengfengli/test-circleci
+
     steps:
       - checkout
       - run: go test -v integration_test.go
