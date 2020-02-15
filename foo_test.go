@@ -8,5 +8,6 @@ import (
 
 func TestFoo(t *testing.T) {
 	fmt.Println("Test foo is called.")
-	fmt.Println("FOO:", os.Getenv("GOOGLE_APPLICATION_CREDENTIALS"))
+	env := os.Getenv("GOOGLE_APPLICATION_CREDENTIALS")
+	fmt.Println("FOO:", env[:5])
 }
